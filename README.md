@@ -7,7 +7,7 @@ AI, data analytics, and dashboard portfolio covering machine learning, anomaly d
 | Project | Description | Repository |
 |---|---|---|
 | CNC/MCT Analytics Dashboard | CNC/MCT equipment data monitoring, utilization analysis, cutting-time analysis, alarm history analysis, and operational dashboard demo. | [GitHub](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) |
-| ML Studio / Insight View | AI-based manufacturing data analysis platform for anomaly detection, supervised learning, threshold alerts, and AI operation monitoring. | Preparing |
+| ML Studio / Insight View | AI-based manufacturing data analysis platform for anomaly detection, supervised learning, threshold alerts, and AI operation monitoring. | [GitHub](https://github.com/junhyuk-99/ml-studio-insight-view-demo) |
 
 ## CNC/MCT Analytics Dashboard
 
