@@ -35,8 +35,31 @@ A dashboard project for monitoring and analyzing CNC/MCT equipment operation dat
 
 https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo
 
-## Upcoming Project
+## ML Studio / Insight View
 
-### ML Studio / Insight View
+A public synthetic demo for a manufacturing AI analytics studio.
 
-A demo repository will be added later.
+This project demonstrates an end-to-end AI analytics workflow for manufacturing data, including anomaly detection, supervised learning result review, threshold alerts, AI operation monitoring, and data exploration.
+
+### Main Features
+
+- AI operation status monitoring
+- Dataset and feature pipeline overview
+- Anomaly detection result dashboard
+- Threshold alert summary and list
+- Supervised learning result review
+- Manufacturing data exploration
+- Synthetic MongoDB seed data
+- Public safety scan script for release validation
+
+### Tech Stack
+
+- Frontend: React / TypeScript / Vite
+- Backend: Spring Boot
+- AI Server: FastAPI
+- Database: MongoDB-compatible synthetic seed data
+- Machine Learning: scikit-learn-compatible demo logic
+
+### Repository
+
+https://github.com/junhyuk-99/ml-studio-insight-view-demo
