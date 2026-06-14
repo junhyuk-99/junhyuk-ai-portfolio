@@ -8,6 +8,16 @@
 
 공개 데모에 사용된 모든 데이터는 합성 또는 익명화된 데이터입니다.
 
+## 미리보기
+
+**ML Studio / Insight View** — AI 운영 개요 대시보드
+
+![ML Studio AI Overview](https://raw.githubusercontent.com/junhyuk-99/ml-studio-insight-view-demo/main/screenshots/ai-overview.png)
+
+**CNC/MCT Analytics Dashboard** — 커맨드 센터 개요
+
+![CNC Command Center](https://raw.githubusercontent.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/main/screenshots/dashboard-command-overview.png)
+
 ## 주요 프로젝트
 
 | 프로젝트 | 설명 | 역할 | 저장소 |
