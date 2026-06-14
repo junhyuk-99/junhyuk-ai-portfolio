@@ -29,7 +29,7 @@ A dashboard project for monitoring and analyzing CNC/MCT equipment operation dat
 - Frontend: React
 - Backend: Spring Boot
 - Database: MongoDB
-- Visualization: ECharts
+- Visualization: Recharts
 
 ### Repository
 
