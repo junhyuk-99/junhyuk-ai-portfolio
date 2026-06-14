@@ -1,151 +1,116 @@
 # Junhyuk AI Portfolio
 
-Public portfolio for manufacturing AI, industrial analytics, and full-stack dashboard projects.
+제조 AI · 산업 데이터 분석 · 풀스택 대시보드 프로젝트 포트폴리오입니다.
 
-This portfolio contains public demo repositories rebuilt from the architecture and workflows of real deployed manufacturing AI and industrial analytics systems.
+이 포트폴리오의 저장소들은 실제 운영·배포된 제조 AI 및 산업 분석 시스템의 아키텍처와 워크플로를 기반으로, 공개용 데모로 재구성한 것입니다.
 
-Production source code, production data, customer information, credentials, infrastructure details, logs, certificates, private environment values, and private Git history are not included.
+운영 소스코드, 운영 데이터, 고객 정보, 인증 정보, 인프라 구성, 로그, 인증서, 비공개 환경값, 비공개 Git 히스토리는 포함하지 않습니다.
 
-All public demo data is synthetic or anonymized.
+공개 데모에 사용된 모든 데이터는 합성 또는 익명화된 데이터입니다.
 
-## Featured Projects
+## 주요 프로젝트
 
-| Project                          | Description                                                                                                                                                         | Role                                                 | Repository                                                               |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------ |
-| ML Studio / Insight View         | Manufacturing AI analytics platform demo for anomaly detection, supervised learning, threshold alerts, AI operation monitoring, and manufacturing data exploration. | Sole developer / Full-stack / AI integration         | [GitHub](https://github.com/junhyuk-99/ml-studio-insight-view-demo)      |
-| CNC/MCT Analytics Dashboard Demo | CNC/MCT manufacturing dashboard demo for equipment utilization, RunTime / CutTime analytics, alarm history, machine status distribution, and KPI monitoring.        | Sole developer / Full-stack / dashboard architecture | [GitHub](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) |
+| 프로젝트 | 설명 | 역할 | 저장소 |
+| --- | --- | --- | --- |
+| ML Studio / Insight View | 이상 탐지, 지도학습 결과 검토, 임계값 알림, AI 운영 모니터링, 제조 데이터 탐색을 제공하는 제조 AI 분석 플랫폼 데모 | 단독 개발 / 풀스택 / AI 연동 | [GitHub](https://github.com/junhyuk-99/ml-studio-insight-view-demo) |
+| CNC/MCT Analytics Dashboard | 설비 가동률, 가동시간/절삭시간 분석, 알람 이력, 설비 상태 분포, KPI 모니터링을 제공하는 CNC/MCT 제조 대시보드 데모 | 단독 개발 / 풀스택 / 대시보드 설계 | [GitHub](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) |
 
-## Project Comparison
+## 프로젝트 비교
 
-| Area         | ML Studio / Insight View                                                                        | CNC/MCT Analytics Dashboard Demo                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Main Focus   | Manufacturing AI analysis platform                                                              | Manufacturing equipment analytics dashboard                                                      |
-| Domain       | Heat-treatment / manufacturing AI workflow                                                      | CNC/MCT equipment monitoring                                                                     |
-| Frontend     | React dashboard                                                                                 | React + TypeScript dashboard                                                                     |
-| Backend      | Spring Boot API                                                                                 | Spring Boot API                                                                                  |
-| AI Server    | FastAPI AI server                                                                               | Not included                                                                                     |
-| Database     | MongoDB demo schema and seed data                                                               | MongoDB synthetic sample dataset                                                                 |
-| Key Features | Anomaly detection, supervised learning, threshold alerts, AI operation status, data exploration | Equipment utilization, RunTime / CutTime ratio, alarm history, status distribution, trend charts |
-| Demo Data    | Synthetic / anonymized data                                                                     | Synthetic sample data                                                                            |
-| Public Scope | Rebuilt public demo from deployed manufacturing AI project                                      | Rebuilt public demo from deployed CNC/MCT dashboard project                                      |
+| 항목 | ML Studio / Insight View | CNC/MCT Analytics Dashboard |
+| --- | --- | --- |
+| 핵심 목적 | 제조 AI 분석 플랫폼 | 제조 설비 분석 대시보드 |
+| 도메인 | 열처리 / 제조 AI 워크플로 | CNC/MCT 설비 모니터링 |
+| 구조 | 모노레포 3-tier (web / api / ai-server) | 2-tier (frontend / backend) |
+| Frontend | React + TypeScript | React + TypeScript |
+| Backend | Spring Boot (Java 17) | Spring Boot (Java 17) |
+| AI Server | FastAPI + scikit-learn | 없음 |
+| Database | MongoDB | MongoDB |
+| 시각화 | 차트 기반 대시보드 | Recharts 기반 대시보드 |
+| 핵심 기능 | 이상 탐지, 지도학습 결과, 임계값 알림, AI 운영 상태, 데이터 탐색 | 설비 가동률, 가동시간/절삭시간 비율, 알람 이력, 상태 분포, 추세 차트 |
+| 데모 데이터 | 합성 / 익명화 데이터 | 합성 샘플 데이터 |
 
-## Project Summary
+## 프로젝트 요약
 
 ### ML Studio / Insight View
 
-ML Studio / Insight View is a public demo of a manufacturing AI analytics platform.
+운영 중인 제조 AI 분석 플랫폼을 공개용으로 재구성한 데모입니다. 모노레포 3-tier 구조(React 웹 / Spring Boot API / FastAPI AI 서버)로, 제조 운영 데이터 분석부터 AI 모델 실행, 이상 탐지 결과 모니터링, 지도학습 결과 검토, 임계값 알림까지 제조 AI 분석 워크플로 전체를 단독 구현했습니다.
 
-It provides a local demo stack for analyzing manufacturing operation data, training AI models, monitoring anomaly detection results, reviewing supervised learning results, checking threshold-based alerts, and monitoring AI operation status.
+주요 구현 영역:
 
-Key implementation areas:
+- 원천 데이터 탐색 → 전처리 → 피처 엔지니어링 → 알고리즘 선택 → 모델 실행 → 결과 검토로 이어지는 분석 파이프라인
+- Isolation Forest / AutoEncoder 기반 비지도 이상 탐지
+- 지도학습 결과 및 평가 지표 시각화
+- 임계값 기반 알림 모니터링
+- FastAPI AI 서버와 Spring Boot API 연동 (polyglot 구조)
+- MongoDB 스키마 설계 및 합성 시드 데이터
 
-* React frontend dashboard
-* Spring Boot backend API
-* FastAPI AI server
-* MongoDB demo schema and seed data
-* Unsupervised anomaly detection flow
-* Supervised learning result view
-* Threshold alert monitoring
-* AI operation status monitoring
-* Manufacturing data exploration views
-* Public demo documentation and synthetic data policy
+저장소: [ml-studio-insight-view-demo](https://github.com/junhyuk-99/ml-studio-insight-view-demo)
 
-Repository:
+### CNC/MCT Analytics Dashboard
 
-* [ml-studio-insight-view-demo](https://github.com/junhyuk-99/ml-studio-insight-view-demo)
+운영 중인 CNC/MCT 설비 대시보드를 공개용으로 재구성한 데모입니다. 설비 가동률, 가동시간 대비 절삭시간 비율, 알람 이력, 설비 상태 분포, 일별 추세, KPI 시각화를 단독 구현했습니다.
 
-### CNC/MCT Analytics Dashboard Demo
+주요 구현 영역:
 
-CNC/MCT Analytics Dashboard Demo is a public demo of a manufacturing equipment analytics dashboard.
+- 설비 가동률 분석
+- 가동시간(RunTime) 대비 절삭시간(CutTime) 비율 계산
+- 알람 이력 분석 및 설비 상태 분포 시각화
+- 일별 추세 및 KPI 카드
+- 요약 데이터(daily summary) 설계를 통한 대시보드 조회 성능 최적화
 
-It focuses on equipment utilization, RunTime / CutTime cutting ratio, alarm history, machine status monitoring, daily trends, and KPI visualization.
+저장소: [cnc-mct-analytics-dashboard-demo](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo)
 
-Key implementation areas:
+## 담당 역할
 
-* React + TypeScript frontend
-* Spring Boot backend API
-* MongoDB demo data model
-* Recharts-based dashboard visualization
-* Equipment utilization analytics
-* RunTime / CutTime cutting ratio calculation
-* Alarm history analytics
-* Machine status distribution views
-* Public demo documentation and synthetic data policy
+두 데모 프로젝트 모두 실제 운영 시스템 개발 경험을 바탕으로, 설계부터 구현까지 단독으로 진행했습니다.
 
-Repository:
+- Frontend 대시보드 설계 및 구현
+- Backend REST API 설계 및 구현
+- MongoDB 스키마 및 집계(aggregation) 설계
+- 제조 설비 데이터 모델링
+- AI 분석 워크플로 설계
+- FastAPI AI 서버 연동
+- 대시보드 KPI 및 차트 구현
+- 합성 / 익명화 데모 데이터 준비
+- 보안을 고려한 문서화 및 정보 공개 범위 통제
 
-* [cnc-mct-analytics-dashboard-demo](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo)
+## 핵심 기술 스택
 
-## My Role
+`React 18` · `TypeScript` · `Spring Boot 3` · `Java 17` · `FastAPI` · `Python` · `scikit-learn` · `MongoDB` · `Docker`
 
-Both public demo projects were designed and implemented as sole-developer portfolio projects based on real deployed manufacturing system experience.
+## 보여주는 역량
 
-Main responsibilities included:
+- 제조 AI 시스템 설계
+- 산업용 대시보드 아키텍처
+- 풀스택 웹 애플리케이션 개발
+- React 대시보드 UI 개발
+- Spring Boot REST API 개발
+- FastAPI AI 서비스 연동
+- MongoDB 스키마 설계 및 집계
+- 이상 탐지 및 지도학습 워크플로 설계
+- 요약 데이터 설계를 통한 대시보드 성능 최적화
+- 합성 / 익명화 데이터 기반 공개 데모 재구성
+- 보안을 고려한 문서화 및 정보 공개 통제
 
-* Frontend dashboard design and implementation
-* Backend API design and implementation
-* MongoDB schema and aggregation design
-* Manufacturing equipment data modeling
-* AI analysis workflow design
-* FastAPI AI server integration
-* Dashboard KPI and chart implementation
-* Synthetic / anonymized demo data preparation
-* Public demo reconstruction
-* Security-aware documentation and disclosure control
+## 공개 데모 정책
 
-## Core Skills Demonstrated
+이 저장소들은 운영 소스코드를 그대로 복사한 것이 아닙니다. 실제 프로젝트의 아키텍처, 워크플로, 엔지니어링 경험을 기반으로 공개용으로 재구성한 데모입니다.
 
-* Manufacturing AI system design
-* Industrial dashboard architecture
-* Full-stack web application development
-* React dashboard UI development
-* Spring Boot REST API development
-* FastAPI AI service integration
-* MongoDB schema design and aggregation
-* Manufacturing equipment data modeling
-* Anomaly detection and supervised learning workflow design
-* Dashboard performance optimization through summary data design
-* Public demo reconstruction with synthetic / anonymized data
-* Security-aware documentation and data disclosure control
+다음 항목은 의도적으로 제외했습니다:
 
-## Public Demo Policy
+- 운영 소스코드 / 운영 DB 연결 / 비공개 Git 히스토리
+- 고객 데이터 / 실제 설비 이력
+- 서버 IP / 인증 정보 / 인증서 / 로그
+- 비공개 환경값 / 내부 배포 스크립트
 
-These repositories are not production source code dumps.
+## 바로가기
 
-They are public demo projects rebuilt from real project architecture, workflows, and engineering experience.
+| 프로젝트 | README | 문서 | 스크린샷 / 케이스 스터디 |
+| --- | --- | --- | --- |
+| ML Studio / Insight View | [README](https://github.com/junhyuk-99/ml-studio-insight-view-demo) | [docs](https://github.com/junhyuk-99/ml-studio-insight-view-demo/tree/main/docs) | [screenshots](https://github.com/junhyuk-99/ml-studio-insight-view-demo/tree/main/screenshots) |
+| CNC/MCT Analytics Dashboard | [README](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) | [docs](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/tree/main/docs) | [case study](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/blob/main/docs/CASE_STUDY_CNC_MCT_DASHBOARD.md) |
 
-The following items are intentionally excluded:
+## 비고
 
-* Production source code
-* Production database connections
-* Customer data
-* Real equipment history
-* Server IP addresses
-* Private credentials
-* Logs
-* Certificates
-* Private environment values
-* Internal deployment scripts
-* Private Git history
-
-## Quick Links
-
-| Project                          | README                                                                   | Docs                                                                                  | Screenshots / Case Study                                                                                                    |
-| -------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| ML Studio / Insight View         | [README](https://github.com/junhyuk-99/ml-studio-insight-view-demo)      | [docs](https://github.com/junhyuk-99/ml-studio-insight-view-demo/tree/main/docs)      | [screenshots](https://github.com/junhyuk-99/ml-studio-insight-view-demo/tree/main/screenshots)                              |
-| CNC/MCT Analytics Dashboard Demo | [README](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) | [docs](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/tree/main/docs) | [case study](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/blob/main/docs/CASE_STUDY_CNC_MCT_DASHBOARD.md) |
-
-## Documentation
-
-Each demo repository contains its own documentation, including architecture notes, API references, data schema descriptions, security notices, and data handling notices.
-
-| Repository                       | Documentation                                                                         |
-| -------------------------------- | ------------------------------------------------------------------------------------- |
-| ML Studio / Insight View         | [docs](https://github.com/junhyuk-99/ml-studio-insight-view-demo/tree/main/docs)      |
-| CNC/MCT Analytics Dashboard Demo | [docs](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo/tree/main/docs) |
-
-## Notes
-
-The projects are designed for portfolio review and local demonstration.
-
-For security and confidentiality reasons, production-only security policies, infrastructure configuration, customer-specific logic, production data, and private deployment details are not included in the public repositories.
+이 프로젝트들은 포트폴리오 검토 및 로컬 실행을 목적으로 설계되었습니다. 보안 및 기밀 유지를 위해 운영 환경의 인증 정책, 인프라 구성, 고객별 비즈니스 로직, 운영 데이터, 비공개 배포 정보는 공개 저장소에 포함하지 않았습니다.
