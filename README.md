@@ -87,7 +87,7 @@ Spring Boot 백엔드 · React 풀스택 개발 포트폴리오입니다. 제조
 
 ## 핵심 기술 스택
 
-`React 18` · `TypeScript` · `Spring Boot 3` · `Java 17` · `FastAPI` · `Python` · `scikit-learn` · `MongoDB` · `Docker`
+`React 18` · `TypeScript` · `Spring Boot 3` · `Java 17` · `FastAPI` · `Python` · `scikit-learn` · `MongoDB` · `SQL Server` · `Docker`
 
 ## AI 활용 / 개발 워크플로
 
