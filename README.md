@@ -1,5 +1,7 @@
 # Junhyuk Portfolio
 
+`Java 17` · `Spring Boot 3` · `React 18` · `TypeScript` · `FastAPI` · `MongoDB` · `SQL Server` · `Docker`
+
 Spring Boot 백엔드 · React 풀스택 개발 포트폴리오입니다. 제조 운영 데이터를 다루는 분석 플랫폼과 대시보드를 설계부터 구현까지 직접 개발한 경험을 정리했습니다.
 
 이 포트폴리오의 저장소들은 실제 운영·배포된 시스템의 아키텍처와 워크플로를 기반으로, 공개용 데모로 재구성한 것입니다.
