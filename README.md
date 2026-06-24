@@ -1,8 +1,8 @@
-# Junhyuk AI Portfolio
+# Junhyuk Portfolio
 
-제조 AI · 산업 데이터 분석 · 풀스택 대시보드 프로젝트 포트폴리오입니다.
+Spring Boot 백엔드 · React 풀스택 개발 포트폴리오입니다. 제조 운영 데이터를 다루는 분석 플랫폼과 대시보드를 설계부터 구현까지 직접 개발한 경험을 정리했습니다.
 
-이 포트폴리오의 저장소들은 실제 운영·배포된 제조 AI 및 산업 분석 시스템의 아키텍처와 워크플로를 기반으로, 공개용 데모로 재구성한 것입니다.
+이 포트폴리오의 저장소들은 실제 운영·배포된 시스템의 아키텍처와 워크플로를 기반으로, 공개용 데모로 재구성한 것입니다.
 
 운영 소스코드, 운영 데이터, 고객 정보, 인증 정보, 인프라 구성, 로그, 인증서, 비공개 환경값, 비공개 Git 히스토리는 포함하지 않습니다.
 
@@ -22,8 +22,8 @@
 
 | 프로젝트 | 설명 | 역할 | 저장소 |
 | --- | --- | --- | --- |
-| ML Studio / Insight View | 이상 탐지, 지도학습 결과 검토, 임계값 알림, AI 운영 모니터링, 제조 데이터 탐색을 제공하는 제조 AI 분석 플랫폼 데모 | 단독 개발 / 풀스택 / AI 연동 | [GitHub](https://github.com/junhyuk-99/ml-studio-insight-view-demo) |
-| CNC/MCT Analytics Dashboard | 설비 가동률, 가동시간/절삭시간 분석, 알람 이력, 설비 상태 분포, KPI 모니터링을 제공하는 CNC/MCT 제조 대시보드 데모 | 단독 개발 / 풀스택 / 대시보드 설계 | [GitHub](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) |
+| ML Studio / Insight View | 이상 탐지, 지도학습 결과 검토, 임계값 알림, AI 운영 모니터링, 제조 데이터 탐색을 제공하는 제조 AI 분석 플랫폼 데모 | 풀스택 / 백엔드 API / AI 연동 | [GitHub](https://github.com/junhyuk-99/ml-studio-insight-view-demo) |
+| CNC/MCT Analytics Dashboard | 설비 가동률, 가동시간/절삭시간 분석, 알람 이력, 설비 상태 분포, KPI 모니터링을 제공하는 CNC/MCT 제조 대시보드 데모 | 풀스택 / 백엔드 API / 대시보드 설계 | [GitHub](https://github.com/junhyuk-99/cnc-mct-analytics-dashboard-demo) |
 
 ## 프로젝트 비교
 
@@ -44,7 +44,7 @@
 
 ### ML Studio / Insight View
 
-운영 중인 제조 AI 분석 플랫폼을 공개용으로 재구성한 데모입니다. 모노레포 3-tier 구조(React 웹 / Spring Boot API / FastAPI AI 서버)로, 제조 운영 데이터 분석부터 AI 모델 실행, 이상 탐지 결과 모니터링, 지도학습 결과 검토, 임계값 알림까지 제조 AI 분석 워크플로 전체를 단독 구현했습니다.
+운영 중인 제조 AI 분석 플랫폼을 공개용으로 재구성한 데모입니다. 모노레포 3-tier 구조(React 웹 / Spring Boot API / FastAPI AI 서버)로, 제조 운영 데이터 분석부터 AI 모델 실행, 이상 탐지 결과 모니터링, 지도학습 결과 검토, 임계값 알림까지 제조 AI 분석 워크플로 전체를 설계·구현했습니다.
 
 주요 구현 영역:
 
@@ -59,7 +59,7 @@
 
 ### CNC/MCT Analytics Dashboard
 
-운영 중인 CNC/MCT 설비 대시보드를 공개용으로 재구성한 데모입니다. 설비 가동률, 가동시간 대비 절삭시간 비율, 알람 이력, 설비 상태 분포, 일별 추세, KPI 시각화를 단독 구현했습니다.
+운영 중인 CNC/MCT 설비 대시보드를 공개용으로 재구성한 데모입니다. 설비 가동률, 가동시간 대비 절삭시간 비율, 알람 이력, 설비 상태 분포, 일별 추세, KPI 시각화를 설계·구현했습니다.
 
 주요 구현 영역:
 
@@ -73,7 +73,7 @@
 
 ## 담당 역할
 
-두 데모 프로젝트 모두 실제 운영 시스템 개발 경험을 바탕으로, 설계부터 구현까지 단독으로 진행했습니다.
+두 데모 프로젝트 모두 실제 운영 시스템 개발 경험을 바탕으로, 설계부터 구현까지 직접 진행했습니다.
 
 - Frontend 대시보드 설계 및 구현
 - Backend REST API 설계 및 구현
